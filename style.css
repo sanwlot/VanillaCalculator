@@ -1,0 +1,90 @@
+/* General styles for the calculator container */
+
+.appContainer {
+  width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Style for the input display */
+.appContainer input {
+  width: 100%;
+  height: 50px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* General button styles */
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style for the number and operator buttons */
+button {
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+/* Highlight operators */
+button.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+button.operator:active {
+  background-color: #d38300;
+}
+
+/* Style the equal button to stand out */
+button.operator[data-value="="] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.operator[data-value="="]:active {
+  background-color: #3e8e41;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .appContainer {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+}
